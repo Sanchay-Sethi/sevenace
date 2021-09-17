@@ -132,7 +132,7 @@ function Header() {
             bgGradient={isDark ?  "linear(to-r, cyan.600, blue.400, purple.300)" :  "linear(to-r, cyan.800, blue.500, purple.400)"} 
             bgClip="text"
           >
-            SevenAce Groups
+            SevenAce Group
           </Text>
           <Text fontSize="4xl" fontWeight="semibold" color = {isDark ? "gray.200" : "gray.100"}>
             <span >
@@ -169,9 +169,9 @@ function Header() {
           <br/>
           <br/>
           <Text data-aos = "fade-right"  color={isDark ? "gray.100" : "gray.100"}>
-                Address - Plot no 166 ,sec-8 Gurugram<br/>
+                Address - Plot no. 166, Sec-8 Gurugram<br/>
                 Contact no - 7011228278, 8800159998<br/>
-                Email - SEVENACE.GROUP@GMAIL.COM
+                Email - sevenace.group@gmail.com
           </Text>
           <Button data-aos = "fade-right" mt={8} colorScheme="blue" onClick={onOpen}>
             Contact Us
