@@ -161,10 +161,10 @@ html::-webkit-scrollbar {
   }
   #aboutsection{
       width: 100vw;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%230050cc' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23494aaa' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%234061c6' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%234049a3' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%235973bf' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%2336489c' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%236b85b8' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%232b4795' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%237997b0' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%231e468f' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%2385aaa8' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%230c4588' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
+      /* background-color: #000000; */
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23101422' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23202744' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23313b66' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23414e88' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%235162AA' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+      background-attachment: fixed;
+      background-size: cover;
   }
   #projectsection{
     width: 100vw;
@@ -173,13 +173,7 @@ html::-webkit-scrollbar {
     background-position: center;
     background-size: cover;
   }
-  #skillsection{
-    width: 100vw;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%230050cc' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23494aaa' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%234061c6' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%234049a3' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%235973bf' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%2336489c' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%236b85b8' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%232b4795' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%237997b0' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%231e468f' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%2385aaa8' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%230c4588' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-  }
+  
 
 
   .setTerminal{
@@ -382,4 +376,54 @@ html::-webkit-scrollbar {
         opacity: 0.8;
       }
       
-    
+
+
+      .wrapper {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .slider {
+        width: 80vw;
+        height: 100px;
+        position: relative;
+        /* background: white; */
+        box-shadow: 0 10px 20px -10px rgba(0,0,0,0.2);
+        display: flex;
+        overflow: hidden;
+      }
+      .slide {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        animation: slideshow 8s linear infinite;
+        border-radius: 30px !important;
+      }
+      .slide img {
+        height: 70px;
+        padding: 0 30px 0 30px;
+        border-radius: 30px !important;
+      }
+      @keyframes slideshow {
+        0% {transform: translateX(0);}
+        100% {transform: translateX(-100%);}
+      }
+      .slider::before, .slider::after {
+        height: 100px;
+        width: 200px;
+        position: absolute;
+        content: "";
+        /* background: linear-gradient(to right, white 0%, rgba(255,255,255,0) 100%); */
+        z-index: 2;
+      }
+      .slider::before {
+        left: 0;
+        top: 0;
+      }
+      .slider::after {
+        right:0;
+        top:0;
+        transform: rotateZ(180deg);
+      }

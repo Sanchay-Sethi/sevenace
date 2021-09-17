@@ -3,6 +3,7 @@ import ProjectCard from './ProjectCard'
 import { useColorMode } from "@chakra-ui/color-mode";
 import { useMediaQuery } from "@chakra-ui/media-query";
 import { Stack, Circle, Flex, Box, Text, Heading } from "@chakra-ui/layout";
+import ProjectTab from '../ProjectTab';
 
 import Aos from 'aos'
 import 'aos/dist/aos.css'
@@ -15,7 +16,7 @@ const Projects = () => {
     const isDark = colorMode === "dark";
     const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
     return (
-        <Stack w = "100%" direction="column" id = "projectsection" justifyContent = "center" position="relative" top="-3">
+        <Stack w = "100%" direction="column" id = "projectsection" justifyContent = "center" position="relative" top = "-3">
 
             {!isNotSmallerScreen ?
             <Box  alignSelf="flex-start" mx = "10" position = "relative" top = {isNotSmallerScreen ? "100" : "0"}>
@@ -27,7 +28,7 @@ const Projects = () => {
 
              <Box alignSelf="flex-start" mx = "10" position = "relative" top = {isNotSmallerScreen ? "100" : "0"}>
                  <Flex>
-                 <Flex direction="column">
+                 <Flex direction="column" >
                     <Heading fontWeight="extrabold" color="cyan.500" size="4xl">
                         Projects
                     </Heading>
@@ -51,7 +52,7 @@ const Projects = () => {
             }}
             direction={isNotSmallerScreen ? "row" : "column"}
             spacing="200px"
-            justifyContent = "space-evenly"
+            justifyContent = "flex-start"
             p={isNotSmallerScreen ? "32" : "0"}
             alignSelf="flex-start"
             alignItems="center"
@@ -59,7 +60,7 @@ const Projects = () => {
             mb = {12}
             >
              
-            <ProjectCard 
+            {/* <ProjectCard 
                 primage = "https://i.ytimg.com/vi/mbCpI766eC8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDJQEQDifOFhnQCi089kK1xmGS7CQ"
                 prtype1 = "APP"
                 prtype2 = "Android App" 
@@ -112,7 +113,10 @@ const Projects = () => {
                 prdesc = "A sports club website that i have made in my 1st year of my Btech with simple concept of DOM renderers like CSS, JS, HTML. Do check it out link given below"
                 prtech = {["HTML","CSS","JS"]}
                 prlink = "https://youtu.be/VncakCaBBbU"
-                />
+                /> */}
+                <ProjectTab/>
+
+
         </Flex>
         </Stack>
     )

@@ -37,14 +37,14 @@ const Contact = () => {
     },
   };
   const [terminalLineData2, setTerminalLineData2] = useState([
-    { type: LineType.Output, value: "Name : Sanchay Sethi" },
-    { type: LineType.Output, value: "Phone no.: +91-7814344020" },
-    { type: LineType.Output, value: "City : Gurgaon" },
+    { type: LineType.Output, value: "Company : SevenAceGroup" },
+    { type: LineType.Output, value: "Phone no.: 7011228278, 8800159998" },
+    { type: LineType.Output, value: "Location : Plot no. 166, Sec-8" },
+    { type: LineType.Output, value: "City : Gurugram" },
     { type: LineType.Output, value: "State : Haryana" },
 
     { type: LineType.Output, value: "Country : India" },
-    { type: LineType.Output, value: "Email : modulewrapper@gmail.com" },
-    { type: LineType.Output, value: "Website : www.sanchaysethi.co.in" },
+    { type: LineType.Output, value: "Email : sevenace.group@gmail.com" },
   ]);
   const [hiremeData, setHiremeData] = useState({
     name: "",
@@ -112,7 +112,7 @@ const Contact = () => {
           >
             <Terminal
               className="setTerminal"
-              name="My Contacts"
+              name="Find Us..."
               colorMode={isDark ? ColorMode.Light : ColorMode.dark}
               lineData={terminalLineData2}
               onInput={(terminalInput) =>
@@ -172,10 +172,10 @@ const Contact = () => {
           <Flex direction="column" w="100%">
             <Box data-aos = "fade-up" alignSelf="flex-start" mx="5" my={9}>
               <Heading fontWeight="extrabold" color="cyan.500" size="4xl">
-                Contact Me
+                Contact Us
               </Heading>
               <Text fontSize="1xl" mx="5" color="gray.400">
-                Contact with me for any query!
+                Contact directly with our team
               </Text>
             </Box>
             <Flex justifyContent="center" align="center" w="100%">
@@ -228,7 +228,7 @@ const Contact = () => {
                   </FormControl>
                 </Flex>
                 <FormControl data-aos = "fade-up" id="message" mx={1}>
-                  <FormLabel textSize="small">Enter Message</FormLabel>
+                  <FormLabel textSize="small">Your Query</FormLabel>
                   <Textarea
                     placeholder="Enter details/message"
                     size="sm"
@@ -245,7 +245,7 @@ const Contact = () => {
                   type="submit"
                   isLoading = {loading}
                 >
-                  Contact Me
+                  Contact Us
                 </Button>
                 </form>
               </Flex>

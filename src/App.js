@@ -9,8 +9,7 @@ import BarLoader from "react-spinners/BarLoader";
 import logo from "./images/022.png"
 import man from "./images/man.png"
 
-
-
+ 
 
 import { Link, animateScroll as scroll } from "react-scroll";import {
   Drawer,
@@ -41,9 +40,10 @@ import Profile from "./components/Profile";
 import Social from "./components/Social";
 import BottomNav from "./components/BottomNav"
 import SideNav from "./components/SideNav"
-import About from "./components/About2"
+import About from "./components/About"
 import Projects from './components/projects/Projects';
 import Skills from './components/skills/Skills';
+import Clients from './components/Clients';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { useMediaQuery } from '@chakra-ui/media-query';
@@ -197,15 +197,16 @@ function App() {
         
       </Flex>
       <Header />
-      {/* <Social/>
-      <Profile /> */}
+      <Social/>
+      <Profile />
       {!isNotSmallerScreen?<BottomNav/>:null}
       {isNotSmallerScreen?<SideNav/>:null}
-      {/* <About/> */}
-      {/* <Projects/>
-      <Skills/>
+      <About/>
+      <Projects/>
+      {/* <Skills/> */}
+      <Clients/>
       <Contact/>
-      <Footer/> */}
+      {/* <Footer/> */}
     </VStack>
     </>
     }

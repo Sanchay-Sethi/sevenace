@@ -118,7 +118,7 @@ function Header() {
       <Flex
         direction={isNotSmallerScreen ? "row" : "column"}
         spacing="200px"
-        p={isNotSmallerScreen ? "32" : "0"}
+        p={isNotSmallerScreen ? "32" : "5"}
         alignSelf="flex-start"
       >
         <Box data-aos = "fade-right" mt={isNotSmallerScreen ? "0" : 16} align="flex-start">

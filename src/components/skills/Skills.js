@@ -23,7 +23,7 @@ const Skills = () => {
     const isDark = colorMode === "dark";
     const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
     return (
-        <Stack w = "100%" p = {6}  direction="row" id="skillsection" m = {0} position="relative" top="-5" >
+        <Stack w = "100%" p = {6}  direction="row"  m = {0} position="relative" top="-5" >
            
           <Flex w={isNotSmallerScreen ? "60%" : "100%"} bg = {isDark ? "gray.600" : "cyan.100"}  borderRadius = "30" 
           direction={isNotSmallerScreen ? "row" : "column"}
