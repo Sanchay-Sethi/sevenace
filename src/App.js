@@ -167,14 +167,14 @@ function App() {
             <DrawerOverlay />
             <DrawerContent>
               <DrawerCloseButton />
-              <DrawerHeader><a href="tel:+91-9210748848">✆ +91-7814344020</a></DrawerHeader>
+              <DrawerHeader><a href="tel:+91-7011228278">✆ +91 7011228278</a></DrawerHeader>
     
               <DrawerBody>
               <Flex  flexDirection = "column" alignItems="center" justifyContent = "center">
               <Button size="lg"    aria-label = "Home" icon={<FaLinkedin />} isRound='true' ><Link onClick={onClose} activeClass="active" to="homesection" spy={true} smooth={true} offset={-70} duration={500}>Home</Link></Button>
               <Button size="lg"  variant="ghost" my={4} ml={2} icon={<FaInstagram />} isRound='true' ><Link onClick={onClose} activeClass="active" to="aboutsection" spy={true} smooth={true} offset={-70} duration={500}>About</Link></Button>
               <Button size="lg"  variant="ghost" mt={4} ml={2} icon={<FaGithub />} isRound='true' ><Link onClick={onClose} activeClass="active" to="projectsection" spy={true} smooth={true} offset={-70} duration={500}>Projects</Link></Button>
-              <Button size="lg" variant="ghost" mt={4} ml={2} icon={<FaGithub />} isRound='true' ><Link onClick={onClose} activeClass="active" to="skillsection" spy={true} smooth={true} offset={-70} duration={500}>Skills</Link></Button>
+              <Button size="lg" variant="ghost" mt={4} ml={2} icon={<FaGithub />} isRound='true' ><Link onClick={onClose} activeClass="active" to="skillsection" spy={true} smooth={true} offset={-70} duration={500}>Clients</Link></Button>
               <Button size="lg"  variant="ghost" my={4} ml={2} icon={<FaGithub />} isRound='true' ><Link onClick={onClose} activeClass="active" to="contactsection" spy={true} smooth={true} offset={-70} duration={500}>Contact</Link></Button>
               </Flex>
               </DrawerBody>
@@ -186,9 +186,9 @@ function App() {
                   Hire Me
                 </Button> */}
                 
-                <Button colorScheme="blue"  onClick={() =>
-                        window.open("https://drive.google.com/uc?id=1sedPMVH_rEYEnKQFWTLvtnNN-2pK4-Ep&export=download")
-                    }> <FaDownload/> &nbsp;Resume</Button>
+                <Button colorScheme="blue" 
+                
+                    > <FaDownload/> &nbsp;Brochure</Button>
               </DrawerFooter>
             </DrawerContent>
           </Drawer>

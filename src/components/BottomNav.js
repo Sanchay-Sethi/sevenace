@@ -2,7 +2,7 @@ import React from 'react'
 import { IconButton } from "@chakra-ui/button";
 import { useColorMode } from "@chakra-ui/color-mode";
 import { Flex, VStack, Heading, Spacer } from "@chakra-ui/layout";
-import { FaSun, FaMoon, FaInstagram, FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa'
+import { FaSun, FaMoon, FaInstagram, FaGithub, FaLinkedin, FaWhatsapp, FaFacebook } from 'react-icons/fa'
 
 
 const BottomNav = () => {
@@ -24,10 +24,12 @@ const BottomNav = () => {
         >
         <Flex w="100%">
 
-          <IconButton   icon={<FaLinkedin />} isRound='true' onClick={() =>window.open("https://www.linkedin.com/in/sanchay-sethi/")}></IconButton>
-          <IconButton  ml={2} icon={<FaInstagram />} isRound='true' onClick={() =>window.open("https://www.instagram.com/sethi.sanchay/")}></IconButton>
-          <IconButton  ml={2} icon={<FaGithub />} isRound='true' onClick={() =>window.open("https://github.com/Sanchay-Sethi/")}></IconButton>
-          <IconButton  ml={2} icon={<FaWhatsapp />} isRound='true' onClick={() =>window.open("https://wa.me/+919210748848")}></IconButton>
+          <IconButton   icon={<FaFacebook />} isRound='true' ></IconButton>
+          <IconButton  ml={2} icon={<FaInstagram />} isRound='true' ></IconButton>
+         
+          <IconButton  ml={2} icon={<FaWhatsapp />} isRound='true' 
+            // onClick={() =>window.open("https://wa.me/+919210748848")}
+            ></IconButton>
           <Spacer/>
           <IconButton  ml={12} icon={isDark ? <FaSun /> : <FaMoon />} isRound='true' onClick={toggleColorMode}></IconButton>
         </Flex>
