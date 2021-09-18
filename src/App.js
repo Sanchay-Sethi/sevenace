@@ -48,6 +48,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Footer2 from './components/Footer2';
 import { useMediaQuery } from '@chakra-ui/media-query';
+import {Helmet} from "react-helmet"
 import "./App.css"
 
 function App() {
@@ -78,6 +79,11 @@ function App() {
 
   return (
     <>
+    <Helmet>
+      <title>SevenAceGroup</title>
+      <meta name = "description" content = "Seven Ace Group Construction Management is an intergrated residential and commercial construction management firm with vast experience in to manage and supervise construtions projects"/>
+      <meta name = "keywords" content = "SevenAceGroup, SevenAceGroupConstruction, Seven Ace"/>
+    </Helmet>
     {
       loadingAnim ? 
       <Flex w= "100%" h = "100vh" justifyContent = "center" alignItems = "center" direction="column">

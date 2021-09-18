@@ -6,6 +6,7 @@ import { FaSun, FaMoon, FaInstagram, FaGithub, FaLinkedin ,FaBars, FaDownload, F
 import { useMediaQuery } from '@chakra-ui/media-query';
 import Typewriter from 'typewriter-effect'
 import { VStack } from '@chakra-ui/react';
+import {Helmet} from "react-helmet"
 
 function Social() {
     const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
