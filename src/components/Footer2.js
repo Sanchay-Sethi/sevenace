@@ -5,7 +5,7 @@ import { Stack, Circle, Flex, Box, Text, Heading,VStack} from "@chakra-ui/layout
 import { useMediaQuery } from "@chakra-ui/media-query";
 import { useColorMode, useColorModeValue} from "@chakra-ui/color-mode";
 import Lottie from "react-lottie";
-import { FaSun, FaMoon, FaInstagram, FaGithub, FaLinkedin ,FaBars, FaDownload, FaYoutube, FaFacebook} from 'react-icons/fa'
+import { FaInstagram,FaYoutube, FaFacebook,FaWhatsapp} from 'react-icons/fa'
 
 import logo from "../images/logo2.jpg"
 
@@ -56,7 +56,6 @@ const Footer2 = () => {
                     </Text>
                     <Text fontSize={15} fontWeight="bold">
                         <a href="tel:+91-7011228278">✆ +91 7011228278</a><br/>
-                        <a href="tel:+91-8800159998">✆ +91 8800159998</a>
                     </Text>
                     <Text mt = {5} fontSize={14} fontWeight="bold">
                         Email
@@ -88,9 +87,9 @@ const Footer2 = () => {
                         Social Medias
                     </Text>
                     <Flex direction="column" py = {4} justifyContent = "flex-start">
-                        <span><Icon as={FaFacebook} boxSize="5" onClick={() =>window.open("https://github.com/Sanchay-Sethi/")}/> Facebook</span>
+                        <span><Icon as={FaFacebook} boxSize="5" onClick={() =>window.open("https://www.facebook.com/people/Seven-Ace/100010327681528/")}/> Facebook</span>
                         <span><Icon as={FaInstagram} boxSize="5" onClick={() =>window.open("https://www.instagram.com/sethi.sanchay/")}/> Instagram</span>
-                        <span><Icon as={FaYoutube} boxSize="5" onClick={() =>window.open("https://www.youtube.com/channel/UCeQgQHrQAlnmrUHkgOT-Avg")}/> Youtube</span>
+                        <span><Icon as={FaWhatsapp} boxSize="5"  onClick={() =>window.open("https://wa.me/+917011228278")}/> Youtube</span>
                     </Flex>
                     
                 </Flex>

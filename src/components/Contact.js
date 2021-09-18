@@ -38,7 +38,7 @@ const Contact = () => {
   };
   const [terminalLineData2, setTerminalLineData2] = useState([
     { type: LineType.Output, value: "Company : SevenAceGroup" },
-    { type: LineType.Output, value: "Phone no.: 7011228278, 8800159998" },
+    { type: LineType.Output, value: "Phone no.: 7011228278" },
     { type: LineType.Output, value: "Location : Plot no. 166, Sec-8" },
     { type: LineType.Output, value: "City : Gurugram" },
     { type: LineType.Output, value: "State : Haryana" },
@@ -62,7 +62,7 @@ const Contact = () => {
 
     e.preventDefault();
     setLoading(true);
-    emailjs.sendForm('service_ti2qqg7', 'template_x64byns', e.target, 'user_eKunwGoAq2HrE9Eav4u9O')
+    emailjs.sendForm('service_9emeese', 'template_o1pu2kh', e.target, 'user_YhyXEczmKWHwBt0DBrBiP')
       .then((result) => {
           setLoading(false);
           addToast("Thank you for contacting", { appearance: "success" });

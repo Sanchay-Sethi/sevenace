@@ -67,13 +67,7 @@ function App() {
     },4000)
 
     Aos.init({duration:2000});
-    // let progress = document.getElementById('progressbar');
-    // let totalHeight =document.body.scrollHeight - window.innerHeight;
 
-    //   window.onscroll = function () {
-    //     let progressHeight = (window.pageYOffset / totalHeight) *100;
-    //     progress.style.height = progressHeight + "%";
-    //   }
 
     // setTimeout(() => {
     //   setAlert(true);
@@ -97,8 +91,7 @@ function App() {
       : 
     <>
 <ScrollToTop style = {isNotSmallerScreen ?  isDark? {padding:"10px", backgroundColor : "#192436", marginBottom :"20px", marginRight : "-10px"} : {padding:"10px", backgroundColor : "#c7e5ff", marginBottom :"20px", marginRight : "-10px" } : isDark? {padding:"10px", backgroundColor : "#192436", marginBottom :"50px", marginRight : "-10px"} : {padding:"10px", backgroundColor : "#c7e5ff", marginBottom :"50px", marginRight : "-10px" }} smooth color={isDark ? "#fff" : "#000"} />
-    {/* <div id = "progressbar"></div>
-    <div id = "scrollpath"></div> */}
+    
     <VStack p={5} id = "homesection">
 
     
@@ -180,9 +173,6 @@ function App() {
               <DrawerFooter>
               <IconButton  mx={2} icon={isDark ? <FaSun /> : <FaMoon />} isRound='true' onClick={toggleColorMode}></IconButton>
 
-                {/* <Button variant="outline" mr={3} onClick={()=>onOpen}>
-                  Hire Me
-                </Button> */}
                 <Spacer/>
                 <Button colorScheme="blue" 
                 onClick={() =>window.open("https://drive.google.com/file/d/1ObxQtotVitATtL-l4GTpNIrqcSuKWsoH/view?usp=drivesdk")}

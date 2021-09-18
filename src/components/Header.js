@@ -59,7 +59,7 @@ function Header() {
     e.preventDefault();
     setLoading(true);
 
-    emailjs.sendForm('service_ti2qqg7', 'template_x64byns', e.target, 'user_eKunwGoAq2HrE9Eav4u9O')
+    emailjs.sendForm('service_9emeese', 'template_o1pu2kh', e.target, 'user_YhyXEczmKWHwBt0DBrBiP')
       .then((result) => {
           setLoading(false);
           addToast("Request Sent Successfully", { appearance: "success" });
@@ -133,7 +133,7 @@ function Header() {
           <br/>
           <Text data-aos = "fade-right"  color={isDark ? "gray.100" : "gray.100"}>
                 Address - Plot no. 166, Sec-8 Gurugram<br/>
-                Contact no - 7011228278, 8800159998<br/>
+                Contact no - 7011228278<br/>
                 Email - sevenace.group@gmail.com
           </Text>
           <Button data-aos = "fade-right" mt={8} colorScheme="blue" onClick={onOpen}>

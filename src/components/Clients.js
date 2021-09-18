@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import {
     Accordion,
     AccordionItem,
@@ -6,7 +6,8 @@ import {
     AccordionPanel,
     AccordionIcon,
   } from "@chakra-ui/react"
-
+  import Aos from 'aos'
+  import 'aos/dist/aos.css'
 import { Image } from "@chakra-ui/image";
 import { Stack, Circle, Flex, Box, Text, Heading} from "@chakra-ui/layout";
 import { useMediaQuery } from "@chakra-ui/media-query";
@@ -37,9 +38,12 @@ const Clients = () => {
     const { colorMode } = useColorMode();
   const isDark = colorMode === "dark";
   const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
+  useEffect(() => {
+    Aos.init({duration:2000});
+  }, [])
     return (
         <Stack id = "skillsection" position = "relative" alignSelf="center" p = {5} w = {isNotSmallerScreen ? "60%" : "100%"} >
-            <Heading my = {5} fontWeight="extrabold" color= {isDark?"cyan.300" : "cyan.700"} size="2xl">
+            <Heading data-aos = "fade-right" my = {5} fontWeight="extrabold" color= {isDark?"cyan.300" : "cyan.700"} size="2xl">
                                     Our Clients👷🏻‍♂️
            </Heading>
            <Lottie alignSelf = "flex-start" options={defaultOptions1} style={{position : "absolute", top :"10%",left : "-35%",opacity : "50%"}}
@@ -47,7 +51,7 @@ const Clients = () => {
            />
            
             <Accordion  allowMultiple >
-            <AccordionItem>
+            <AccordionItem data-aos = "fade-up">
                 <h2>
                 <AccordionButton>
                     <Box flex="1" textAlign="left">
@@ -57,14 +61,11 @@ const Clients = () => {
                 </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.
+                
                 </AccordionPanel>
             </AccordionItem>
 
-            <AccordionItem>
+            <AccordionItem  data-aos = "fade-up">
                 <h2>
                 <AccordionButton>
                     <Box flex="1" textAlign="left">
@@ -74,13 +75,10 @@ const Clients = () => {
                 </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.
+                
                 </AccordionPanel>
             </AccordionItem>
-            <AccordionItem>
+            <AccordionItem  data-aos = "fade-up">
                 <h2>
                 <AccordionButton>
                     <Box flex="1" textAlign="left">
@@ -90,13 +88,10 @@ const Clients = () => {
                 </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.
+                
                 </AccordionPanel>
             </AccordionItem>
-            <AccordionItem>
+            <AccordionItem  data-aos = "fade-up">
                 <h2>
                 <AccordionButton>
                     <Box flex="1" textAlign="left">
@@ -106,13 +101,10 @@ const Clients = () => {
                 </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.
+                
                 </AccordionPanel>
             </AccordionItem>
-            <AccordionItem>
+            <AccordionItem  data-aos = "fade-up">
                 <h2>
                 <AccordionButton>
                     <Box flex="1" textAlign="left">
@@ -122,13 +114,10 @@ const Clients = () => {
                 </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.
+                
                 </AccordionPanel>
             </AccordionItem>
-            <AccordionItem>
+            <AccordionItem  data-aos = "fade-up">
                 <h2>
                 <AccordionButton>
                     <Box flex="1" textAlign="left">
@@ -138,13 +127,10 @@ const Clients = () => {
                 </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.
+               
                 </AccordionPanel>
             </AccordionItem>
-            <AccordionItem>
+            <AccordionItem  data-aos = "fade-up">
                 <h2>
                 <AccordionButton>
                     <Box flex="1" textAlign="left">
@@ -154,13 +140,10 @@ const Clients = () => {
                 </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.
+                
                 </AccordionPanel>
             </AccordionItem>
-            <AccordionItem>
+            <AccordionItem  data-aos = "fade-up">
                 <h2>
                 <AccordionButton>
                     <Box flex="1" textAlign="left">
@@ -170,32 +153,12 @@ const Clients = () => {
                 </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.
+                
                 </AccordionPanel>
             </AccordionItem>
             </Accordion>
-            <Heading alignSelf = "center" my = {10} fontWeight="extrabold" color= {isDark?"cyan.300" : "cyan.700"} style = {{fontSize: "30px"}}>
-                                   Our Associated Partners
-           </Heading>
-            <Stack mt = {5} alignSelf = "center" justifyContent = "space-evenly" alignItems = "center" direction={isNotSmallerScreen ? "row" : "row"} w = "60%">
-                <Stack borderRadius = {30} p = {isNotSmallerScreen ? 5 : 4} bg = {isDark? "blue.800" : "blue.100"} justifyContent = "center" alignItems = "flex-start" direction= "column" w ="200px">
-                    <Image src={cl1} w = "100%" style ={{borderRadius : "20px", borderBottom : "2px solid black"}}/>
-                    <Text px = {isNotSmallerScreen ? 5 : 0} fontSize={isNotSmallerScreen ? 17 : 12}>
-                            AbhishekVashist <br/>
-                            +917011228278             
-                    </Text>
-                </Stack>
-                <Stack  borderRadius = {30} p = {5} bg = {isDark? "blue.800" : "blue.100"} justifyContent = "center" alignItems = "flex-start" direction= "column" w = "200px">
-                    <Image src={cl2} w = "100%" style ={{borderRadius : "20px", borderBottom : "2px solid white"}}/>
-                    <Text px = {isNotSmallerScreen ? 5 : 0} fontSize={isNotSmallerScreen ? 17 : 12}>
-                            Akash Arora <br/>
-                            +918800159998  
-                    </Text>
-                </Stack>
-            </Stack>
+           
+            
         </Stack>
     )
 }

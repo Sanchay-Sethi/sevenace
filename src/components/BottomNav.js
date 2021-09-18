@@ -24,11 +24,11 @@ const BottomNav = () => {
         >
         <Flex w="100%">
 
-          <IconButton   icon={<FaFacebook />} isRound='true' ></IconButton>
+          <IconButton   icon={<FaFacebook />} isRound='true' onClick={() =>window.open("https://www.facebook.com/people/Seven-Ace/100010327681528/")}></IconButton>
           <IconButton  ml={2} icon={<FaInstagram />} isRound='true' ></IconButton>
          
           <IconButton  ml={2} icon={<FaWhatsapp />} isRound='true' 
-            // onClick={() =>window.open("https://wa.me/+919210748848")}
+            onClick={() =>window.open("https://wa.me/+917011228278")}
             ></IconButton>
           <Spacer/>
           <IconButton  ml={12} icon={isDark ? <FaSun /> : <FaMoon />} isRound='true' onClick={toggleColorMode}></IconButton>

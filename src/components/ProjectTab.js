@@ -1,9 +1,11 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react"
 import { Image } from "@chakra-ui/image";
 import { Stack, Circle, Flex, Box, Text, Heading} from "@chakra-ui/layout";
 import { useMediaQuery } from "@chakra-ui/media-query";
 import { useColorMode, useColorModeValue} from "@chakra-ui/color-mode";
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import pr1 from "../images/projects/pr1.png"
 import pr2 from "../images/projects/pr2.png"
 import pr3 from "../images/projects/pr3.png"
@@ -33,6 +35,9 @@ const ProjectTab = () => {
     ["red.50", "teal.50", "blue.50"],
     ["red.900", "teal.900", "blue.900"],
   )
+  useEffect(() => {
+    Aos.init({duration:2000});
+  }, [])
   const [tabIndex, setTabIndex] = React.useState(0)
   const bg = colors[tabIndex]
     return (
@@ -49,7 +54,7 @@ const ProjectTab = () => {
                     <TabPanels>
 
                         <TabPanel m = {5} style={{borderRadius : "30px"}} bg = {isDark? "blue.800" : "blue.100"}>
-                            <Stack justifyContent = "space-evenly" alignItems = "center" direction={isNotSmallerScreen ? "row" : "column"}>
+                            <Stack data-aos = "fade-right" justifyContent = "space-evenly" alignItems = "center" direction={isNotSmallerScreen ? "row" : "column"}>
                                 <Image src={pr2} w = {400} h = {300} borderRadius = {20} style={isDark ?{borderBottom : "3px solid white"} : {borderBottom : "3px solid #2f2f2f"}}/>
                                 <Stack direction = "column" variant = "bold" justifyContent = "flex-start" alignItems = "flex-start">
                                     <Heading fontWeight="extrabold" color= {isDark?"cyan.300" : "cyan.700"} size="2xl">
@@ -65,7 +70,7 @@ const ProjectTab = () => {
 
                                 
                             </Stack>
-                            <Stack justifyContent = "space-evenly" alignItems = "center" direction={isNotSmallerScreen ? "row" : "column-reverse"}>
+                            <Stack data-aos = "fade-right" justifyContent = "space-evenly" alignItems = "center" direction={isNotSmallerScreen ? "row" : "column-reverse"}>
                                
                                 <Stack direction = "column" variant = "bold">
                                 <Heading fontWeight="extrabold" color= {isDark?"cyan.300" : "cyan.700"} size="2xl">
@@ -86,7 +91,7 @@ const ProjectTab = () => {
                     </TabPanel>
 
                         <TabPanel m = {5} style={{borderRadius : "30px"}} bg = {isDark? "blue.800" : "blue.100"}>
-                        <Stack justifyContent = "space-evenly" alignItems = "center" direction={isNotSmallerScreen ? "row" : "column"}>
+                        <Stack data-aos = "fade-right" justifyContent = "space-evenly" alignItems = "center" direction={isNotSmallerScreen ? "row" : "column"}>
                                 <Image src={pr3} w = {400} h = {300} borderRadius = {20} style={isDark ?{borderBottom : "3px solid white"} : {borderBottom : "3px solid #2f2f2f"}}/>
                                 <Stack direction = "column" variant = "bold" justifyContent = "flex-start" alignItems = "flex-start">
                                     <Heading fontWeight="extrabold" color= {isDark?"cyan.300" : "cyan.700"} size="2xl">
@@ -104,7 +109,7 @@ const ProjectTab = () => {
 
                                 
                             </Stack>
-                            <Stack justifyContent = "space-evenly" alignItems = "center" direction={isNotSmallerScreen ? "row" : "column-reverse"}>
+                            <Stack data-aos = "fade-right" justifyContent = "space-evenly" alignItems = "center" direction={isNotSmallerScreen ? "row" : "column-reverse"}>
                                
                                 <Stack direction = "column" variant = "bold">
                                 <Heading fontWeight="extrabold" color= {isDark?"cyan.300" : "cyan.700"} size="2xl">
@@ -124,7 +129,7 @@ const ProjectTab = () => {
                         </TabPanel>
 
                         <TabPanel m = {5} style={{borderRadius : "30px"}} bg = {isDark? "blue.800" : "blue.100"}>
-                        <Stack justifyContent = "space-evenly" alignItems = "center" direction={isNotSmallerScreen ? "row" : "column"}>
+                        <Stack data-aos = "fade-right" justifyContent = "space-evenly" alignItems = "center" direction={isNotSmallerScreen ? "row" : "column"}>
                                 <Image src={pr5} w = {400} h = {300} borderRadius = {20} style={isDark ?{borderBottom : "3px solid white"} : {borderBottom : "3px solid #2f2f2f"}}/>
                                 <Stack direction = "column" variant = "bold" justifyContent = "flex-start" alignItems = "flex-start">
                                     <Heading fontWeight="extrabold" color= {isDark?"cyan.300" : "cyan.700"} size="2xl">
@@ -142,7 +147,7 @@ const ProjectTab = () => {
 
                                 
                             </Stack>
-                            <Stack justifyContent = "space-evenly" alignItems = "center" direction={isNotSmallerScreen ? "row" : "column-reverse"}>
+                            <Stack data-aos = "fade-right" justifyContent = "space-evenly" alignItems = "center" direction={isNotSmallerScreen ? "row" : "column-reverse"}>
                                
                                 <Stack direction = "column" variant = "bold">
                                 <Heading fontWeight="extrabold" color= {isDark?"cyan.300" : "cyan.700"} size="2xl">
@@ -159,7 +164,7 @@ const ProjectTab = () => {
                                 <Image src={pr6} w = {400} h = {300} borderRadius = {20} style={isDark ?{borderBottom : "3px solid white"} : {borderBottom : "3px solid #2f2f2f"}}/>
                                 
                             </Stack>
-                        <Stack justifyContent = "space-evenly" alignItems = "center" direction={isNotSmallerScreen ? "row" : "column"}>
+                        <Stack data-aos = "fade-right" justifyContent = "space-evenly" alignItems = "center" direction={isNotSmallerScreen ? "row" : "column"}>
                                 <Image src={pr7} w = {400} h = {300} borderRadius = {20} style={isDark ?{borderBottom : "3px solid white"} : {borderBottom : "3px solid #2f2f2f"}}/>
                                 <Stack direction = "column" variant = "bold" justifyContent = "flex-start" alignItems = "flex-start">
                                     <Heading fontWeight="extrabold" color= {isDark?"cyan.300" : "cyan.700"} size="2xl">
@@ -176,7 +181,7 @@ const ProjectTab = () => {
 
                                 
                             </Stack>
-                            <Stack justifyContent = "space-evenly" alignItems = "center" direction={isNotSmallerScreen ? "row" : "column-reverse"}>
+                            <Stack data-aos = "fade-right" justifyContent = "space-evenly" alignItems = "center" direction={isNotSmallerScreen ? "row" : "column-reverse"}>
                                
                                 <Stack direction = "column" variant = "bold">
                                 <Heading fontWeight="extrabold" color= {isDark?"cyan.300" : "cyan.700"} size="2xl">
