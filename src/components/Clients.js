@@ -180,19 +180,19 @@ const Clients = () => {
             <Heading alignSelf = "center" my = {10} fontWeight="extrabold" color= {isDark?"cyan.300" : "cyan.700"} style = {{fontSize: "30px"}}>
                                    Our Associated Partners
            </Heading>
-            <Stack mt = {5} alignSelf = "center" justifyContent = "space-evenly" alignItems = "center" direction={isNotSmallerScreen ? "row" : "column"} w = "60%">
-                <Stack borderRadius = {30} p = {5} bg = {isDark? "blue.800" : "blue.100"} justifyContent = "center" alignItems = "flex-start" direction= "column" w = "200px">
+            <Stack mt = {5} alignSelf = "center" justifyContent = "space-evenly" alignItems = "center" direction={isNotSmallerScreen ? "row" : "row"} w = "60%">
+                <Stack borderRadius = {30} p = {isNotSmallerScreen ? 5 : 4} bg = {isDark? "blue.800" : "blue.100"} justifyContent = "center" alignItems = "flex-start" direction= "column" w ="200px">
                     <Image src={cl1} w = "100%" style ={{borderRadius : "20px", borderBottom : "2px solid black"}}/>
-                    <Text fontSize={17}>
-                            Abhishek Vashist <br/>
-                            🤙+91-7011228278             
+                    <Text px = {isNotSmallerScreen ? 5 : 0} fontSize={isNotSmallerScreen ? 17 : 12}>
+                            AbhishekVashist <br/>
+                            +917011228278             
                     </Text>
                 </Stack>
                 <Stack  borderRadius = {30} p = {5} bg = {isDark? "blue.800" : "blue.100"} justifyContent = "center" alignItems = "flex-start" direction= "column" w = "200px">
                     <Image src={cl2} w = "100%" style ={{borderRadius : "20px", borderBottom : "2px solid white"}}/>
-                    <Text fontSize={17}>
+                    <Text px = {isNotSmallerScreen ? 5 : 0} fontSize={isNotSmallerScreen ? 17 : 12}>
                             Akash Arora <br/>
-                            🤙+91-8800159998  
+                            +918800159998  
                     </Text>
                 </Stack>
             </Stack>

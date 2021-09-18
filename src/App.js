@@ -46,6 +46,7 @@ import Skills from './components/skills/Skills';
 import Clients from './components/Clients';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Footer2 from './components/Footer2';
 import { useMediaQuery } from '@chakra-ui/media-query';
 import "./App.css"
 
@@ -74,9 +75,9 @@ function App() {
     //     progress.style.height = progressHeight + "%";
     //   }
 
-    setTimeout(() => {
-      setAlert(true);
-    }, 6000);
+    // setTimeout(() => {
+    //   setAlert(true);
+    // }, 6000);
   },[])
 
  
@@ -102,7 +103,7 @@ function App() {
 
     
 
-    {alert && 
+    {/* {alert && 
       <Stack >
         <Modal isOpen={alert} onClose={()=>setAlert(false)} className="modaldesign">
             <ModalOverlay />
@@ -120,9 +121,6 @@ function App() {
                   alignSelf="center"
                   w="95%"
                 >
-                  {/* <Text mb={9} color={isDark ? "gray.200" : "gray.500"}>
-                    Add your details below, will send an email for the contact or query.
-                  </Text> */}
                       <img src = {man} />
                  
                 </Flex>
@@ -131,7 +129,7 @@ function App() {
             </ModalContent>
           </Modal>
       </Stack>
-    }
+    } */}
 
 
 
@@ -180,14 +178,14 @@ function App() {
               </DrawerBody>
     
               <DrawerFooter>
-              <IconButton mx={2} icon={isDark ? <FaSun /> : <FaMoon />} isRound='true' onClick={toggleColorMode}></IconButton>
+              <IconButton  mx={2} icon={isDark ? <FaSun /> : <FaMoon />} isRound='true' onClick={toggleColorMode}></IconButton>
 
                 {/* <Button variant="outline" mr={3} onClick={()=>onOpen}>
                   Hire Me
                 </Button> */}
-                
+                <Spacer/>
                 <Button colorScheme="blue" 
-                
+                onClick={() =>window.open("https://drive.google.com/file/d/1ObxQtotVitATtL-l4GTpNIrqcSuKWsoH/view?usp=drivesdk")}
                     > <FaDownload/> &nbsp;Brochure</Button>
               </DrawerFooter>
             </DrawerContent>
@@ -206,7 +204,7 @@ function App() {
       {/* <Skills/> */}
       <Clients/>
       <Contact/>
-      {/* <Footer/> */}
+      <Footer2/>
     </VStack>
     </>
     }

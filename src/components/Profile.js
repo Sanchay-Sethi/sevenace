@@ -57,13 +57,13 @@ function Profile() {
                 w={isNotSmallerScreen?"1000px":"450px"} h={isNotSmallerScreen?"200px":"450px"} alignSelf={isNotSmallerScreen ? "center" : "flex-end"} />
                 
                 {/* <Icon as={FaGithub} boxSize="30" w="700px" h="700px" zIndex = "-1"  position="absolute" bg="blue.100" opacity={isDark?"0.1":"0.4"} alignSelf="flex-end"/> */}
-            <Box data-aos = "zoom-in" alignSelf="center" px="45" py="45">
+            <Box data-aos = "zoom-in" alignSelf="center" px= {isNotSmallerScreen ?"45" : "20" } py={isNotSmallerScreen ?"45" : "20" }>
                 <Heading fontWeight="extrabold" color="cyan.500" size="5xl">
                     <img src= {logo} style = {{borderRadius : "50%"}}/>
                 </Heading>
             </Box>
-            <Box alignSelf="center" px="32" py="16">
-                <Text fontWeight="bold" fontSize="2xl">Our three most important protocols : </Text>
+            <Box alignSelf="center" px="32" py="16" style = {isNotSmallerScreen ? null :{position : "relative" , top : "-90px"}}>
+                <Text fontWeight="bold" fontSize={isNotSmallerScreen ? "3xl" : "2xl"}>Our Three Most Important Protocols : </Text>
                 <Flex  direction={isNotSmallerScreen ? "row" : "column"} mt={8} >
                     <Flex data-aos = "fade-right" rounded="xl" direction="column" mt={4} bg="blue.400" h="30vh" w="30vh" justify="flex-end">
                         {/* <Icon color="white" p="4" as={ImEarth} w="24" h="24" /> */}
@@ -89,7 +89,7 @@ function Profile() {
                         {/* <Icon as={DiAndroid} p="4" w="24" h="24" color="black" /> */}
                         <Lottie options={defaultOptions3} height={150} width={150} />
                         <Text color="black" p="4" fontSize="xl" fontWeight="semibold">
-                            Long term development
+                            Long Term Development
                         </Text>
                     </Flex>
                 </Flex>

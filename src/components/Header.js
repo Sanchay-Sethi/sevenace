@@ -76,45 +76,7 @@ function Header() {
     
     <Stack className="headerstack" overflow="hidden">
 
-      {/* <div className = "bgvid"></div> */}
-      {/* <video id="background-video" loop autoplay>
-        <source src="http://www.sample-videos.com/video/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
-        <source src="http://www.sample-videos.com/video/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/ogg">
-        Your browser does not support the video tag.
-      </video> */}
-
-      {/* <video
-        id="background-video" 
-        loop 
-        autoplay
-      >
-         <source src={bgvid} type="video/mp4"/>  
-         Your browser does not support the video tag.
-         
-      </video> */}
-
-      
-
-      {/* <Circle
-        className="animateme1"
-        zIndex="-1"
-        position="absolute"
-        bg="blue.100"
-        opacity={isDark ? "0.1" : "0.4"}
-        w="300px"
-        h="300px"
-        alignSelf="flex-end"
-      />
-      <Circle
-        className="animateme2"
-        zIndex="-1"
-        position="absolute"
-        bg="blue.100"
-        opacity={isDark ? "0.1" : "0.4"}
-        w="100px"
-        h="100px"
-        alignSelf="flex-end"
-      /> */}
+     
       <Flex
         direction={isNotSmallerScreen ? "row" : "column"}
         spacing="200px"
@@ -127,14 +89,15 @@ function Header() {
           </Text>
           <Text
           
-            fontSize="7xl"
+            fontSize={isNotSmallerScreen ? "7xl" : "7xl"}
             fontWeight="bold"
             bgGradient={isDark ?  "linear(to-r, cyan.600, blue.400, purple.300)" :  "linear(to-r, cyan.800, blue.500, purple.400)"} 
             bgClip="text"
+            style = {isNotSmallerScreen ? null : {lineHeight : "70px"}}
           >
             SevenAce Group
           </Text>
-          <Text fontSize="4xl" fontWeight="semibold" color = {isDark ? "gray.200" : "gray.100"}>
+          <Text fontSize={isNotSmallerScreen ? "4xl" : "2xl"} my={5}fontWeight="semibold" color = {isDark ? "gray.200" : "gray.100"}>
             <span >
               <Typewriter
                 options={{
@@ -149,7 +112,7 @@ function Header() {
                     .deleteAll()
                     .typeString("we deliver projects")
                     .pauseFor(600)
-                    .deleteChars(9)
+                    .deleteAll()
                     .typeString("creates longterm fix")
                     .pauseFor(2000)
                     .deleteAll()
@@ -263,56 +226,16 @@ function Header() {
             mx={3}
             colorScheme="blue"
             variant="outline"
-            // onClick={() =>
-            //   window.open(
-            //     "https://drive.google.com/uc?id=1sedPMVH_rEYEnKQFWTLvtnNN-2pK4-Ep&export=download"
-            //   )
-            // }
+            onClick={() =>window.open("https://drive.google.com/file/d/1ObxQtotVitATtL-l4GTpNIrqcSuKWsoH/view?usp=drivesdk")}
           >
             {" "}
             <FaDownload /> &nbsp;Brochure
           </Button>
         </Box>
 
-        {/* <Image
-          m="50"
-          alignSelf="center"
-          mt={isNotSmallerScreen ? "0" : "12"}
-          mb={isNotSmallerScreen ? "0" : "12"}
-          // borderRadius="full"
-          backgroundColor="transparent"
-          boxShadow="lg"
-          boxSize="300px"
-          src={avatar}
-        /> */}
         <Lottie   alignSelf="center" options={defaultOptions} height={isNotSmallerScreen ? 550 : 400} width={isNotSmallerScreen ? 550 : 400} />
       </Flex>
-      {/* <Circle
-        className="animateme4"
-        zIndex="-1"
-        position="absolute"
-        bg="blue.100"
-        opacity={isDark ? "0.1" : "0.4"}
-        top="280"
-        left="-250"
-        w="600px"
-        h="600px"
-        alignSelf="flex-start"
-      /> */}
-      {/* {isNotSmallerScreen ? (
-        <Circle
-          className="animateme3"
-          zIndex="-1"
-          position="absolute"
-          bg="blue.100"
-          opacity={isDark ? "0.1" : "0.4"}
-          top="200"
-          left="500"
-          w="200px"
-          h="200px"
-          alignSelf="flex-start"
-        />
-      ) : null} */}
+     
     </Stack>
   );
 }

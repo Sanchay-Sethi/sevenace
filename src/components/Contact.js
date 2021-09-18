@@ -104,7 +104,7 @@ const Contact = () => {
             top={isNotSmallerScreen ? "3" : "0"}
             left={isNotSmallerScreen ? "3" : "0"}
             zIndex={isNotSmallerScreen ? 1 : 0}
-            height="350px"
+            height={isNotSmallerScreen ? "350px" : "400px"}
             bg={isDark ? "gray.600" : "gray.700"}
             position="relative"
             borderRadius="10px"

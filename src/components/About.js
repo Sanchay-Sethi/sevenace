@@ -105,21 +105,12 @@ const About = () => {
 
     return (
         <Stack justifyContent = "flex-start" alignItems = "center"  id="aboutsection" style={{overflow: 'hidden'}}  direction={isNotSmallerScreen ? "row" : "column-reverse"} w="100%">
-                <Box  style={{borderRadius : "10px"}} position="relative" bg = {isDark? "white" : "black"} w = "500" h = "600"> 
+                <Box  style={{borderRadius : "10px"}} position="relative" bg = {isDark? "white" : "black"} w = "500" h = {isNotSmallerScreen ? "600" : "700"}> 
                     <Terminal  className = "setTerminal"  name='About Us:' colorMode={isDark ? ColorMode.Dark : ColorMode.Light }  lineData={ terminalLineData } onInput={ terminalInput => console.log(`What are you doing here, Get back to my website, lol `) }/>
                 </Box>
                 
-                {/* <Flex flexDirection = "column">
-                {isNotSmallerScreen ? 
-                    <>
-                    <Circle className = "aboutcircle1" position="relative" bg="blue.100" opacity={isDark?"0.1":"0.8"} top="10" left="-200"
-                    w={isNotSmallerScreen?"400px":"450px"} h={isNotSmallerScreen?"100px":"450px"} alignSelf={isNotSmallerScreen ? "flex-start" : "flex-end"} />
-                    <Circle  className = "aboutcircle2" position="relative" bg="blue.100" opacity={isDark?"0.1":"0.9"} top="65" left="-220"
-                     w={isNotSmallerScreen?"300px":"450px"} h={isNotSmallerScreen?"100px":"450px"} alignSelf={isNotSmallerScreen ? "flex-start" : "flex-end"} /> </>
-                     : null}
-                    
-                </Flex> */}
-                
+               
+ 
                     <Lottie style = {isNotSmallerScreen ? {position : "relative", right : "10%"} : {position : "relative", right : "0"}} options={defaultOptions} height={isNotSmallerScreen ? 500 : 300} width={isNotSmallerScreen ? 600 : 350} />
 
         </Stack>

@@ -16,7 +16,7 @@ const Projects = () => {
     const isDark = colorMode === "dark";
     const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
     return (
-        <Stack w = "100%" direction="column" id = "projectsection" justifyContent = "center" position="relative" top = "-3">
+        <Stack w = "100%" direction="column" id = "projectsection" justifyContent = "center" position="relative" top = {isNotSmallerScreen ? "-3" : "6"}>
 
             {!isNotSmallerScreen ?
             <Box  alignSelf="flex-start" mx = "10" position = "relative" top = {isNotSmallerScreen ? "100" : "0"}>
