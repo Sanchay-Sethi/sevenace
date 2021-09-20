@@ -88,8 +88,8 @@ const Footer2 = () => {
                     </Text>
                     <Flex direction="column" py = {4} justifyContent = "flex-start">
                         <span><Icon as={FaFacebook} boxSize="5" onClick={() =>window.open("https://www.facebook.com/people/Seven-Ace/100010327681528/")}/> Facebook</span>
-                        <span><Icon as={FaInstagram} boxSize="5" onClick={() =>window.open("https://www.instagram.com/sethi.sanchay/")}/> Instagram</span>
-                        <span><Icon as={FaWhatsapp} boxSize="5"  onClick={() =>window.open("https://wa.me/+917011228278")}/> Youtube</span>
+                        <span><Icon as={FaInstagram} boxSize="5" onClick={() =>window.open("https://www.instagram.com/modxplore/")}/> Instagram</span>
+                        <span><Icon as={FaWhatsapp} boxSize="5"  onClick={() =>window.open("https://wa.me/+917011228278")}/> Whatsapp</span>
                     </Flex>
                     
                 </Flex>
