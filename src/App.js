@@ -49,6 +49,8 @@ import Footer from './components/Footer';
 import Footer2 from './components/Footer2';
 import { useMediaQuery } from '@chakra-ui/media-query';
 import {Helmet} from "react-helmet"
+import Lottie from "react-lottie";
+import loadingcons from "./images/loadingcons";
 import "./App.css"
 
 function App() {
@@ -61,11 +63,20 @@ function App() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef();
 
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: loadingcons,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
   useEffect(()=>{
     setLoadingAnim(true);
     setTimeout(()=>{
       setLoadingAnim(false)
-    },4000)
+    },3500)
 
     Aos.init({duration:2000});
 
@@ -92,11 +103,12 @@ function App() {
      {
       loadingAnim ? 
       <Flex w= "100%" h = "100vh" justifyContent = "center" alignItems = "center" direction="column">
-            <ClimbingBoxLoader
+            <Lottie   alignSelf="center" options={defaultOptions} height={isNotSmallerScreen ? 200 : 100} width={isNotSmallerScreen ? 300 : 200} />
+            {/* <ClimbingBoxLoader
                     size = {isNotSmallerScreen ? "30" : "20"}
                     color = {'#1F73D4'}
                     loading = {loadingAnim}
-                  />
+                  /> */}
       </Flex>
       
       : 
