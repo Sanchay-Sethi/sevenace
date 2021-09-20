@@ -103,7 +103,7 @@ const Footer2 = () => {
                         © copyright 2021-22 SevenAceGroup
                     </Text>
                     <Text fontSize={12} fontWeight="bold">
-                        Designed and Developed by <a href="https://www.instagram.com/sethi.sanchay/" target="_blank" style = {{fontSize: "15px"}}>💜 Module Wrapper</a>
+                        Designed and Developed by <a href="https://www.instagram.com/modxplore/" target="_blank" style = {{fontSize: "15px"}}>💜 ModXplore</a>
                     </Text>
             </Flex>
         </Stack>
