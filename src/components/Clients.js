@@ -156,6 +156,32 @@ const Clients = () => {
                 
                 </AccordionPanel>
             </AccordionItem>
+            <AccordionItem  data-aos = "fade-up">
+                <h2>
+                <AccordionButton>
+                    <Box flex="1" textAlign="left">
+                    9. Meenakshi Polymers Pvt. Ltd.
+                    </Box>
+                    <AccordionIcon />
+                </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>
+                
+                </AccordionPanel>
+            </AccordionItem>
+            <AccordionItem  data-aos = "fade-up">
+                <h2>
+                <AccordionButton>
+                    <Box flex="1" textAlign="left">
+                    10. BMJ Law Partners
+                    </Box>
+                    <AccordionIcon />
+                </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>
+                
+                </AccordionPanel>
+            </AccordionItem>
             </Accordion>
            
             

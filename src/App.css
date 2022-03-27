@@ -1,4 +1,4 @@
-
+@import "~react-image-gallery/styles/css/image-gallery.css";
 @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
 html::-webkit-scrollbar {
     width:0;
@@ -452,5 +452,40 @@ html::-webkit-scrollbar {
         background-color: rgba(255, 255, 255, 0.075);
         z-index : -1;
         transform : rotate(30deg) !important;
+      }
+
+      .latestpr{
+        animation: latestpranim 1s linear infinite; 
+        border : 2px dotted red;
+        margin : 0px 10px;
+      }
+      @keyframes latestpranim {
+        0%{
+          transform : scale(1);
+          filter : hue-rotate(0deg)
+        }
+        50%{
+          transform : scale(1.05);
+          filter : hue-rotate(270deg)
+        }
+        100%{
+          transform : scale(1);
+          filter : hue-rotate(90deg)
+        }
+      }
+      .animatelogo{
+        animation: animlogo 1s linear infinite; 
+      }
+
+      @keyframes animlogo {
+        0%{
+          transform : scale(1);
+        }
+        50%{
+          transform : scale(1.05);
+        }
+        100%{
+          transform : scale(1);
+        }
       }
       
