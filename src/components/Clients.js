@@ -17,6 +17,7 @@ import sparkle from "../images/spark"
 import plane from "../images/plane"
 import cl1 from "../images/cl1.png"
 import cl2 from "../images/cl2.png"
+import ClientGrid from './ClientGrid';
 
 const Clients = () => {
     const defaultOptions1 = {
@@ -43,12 +44,11 @@ const Clients = () => {
   }, [])
     return (
         <Stack id = "skillsection" position = "relative" alignSelf="center" p = {5} w = {isNotSmallerScreen ? "60%" : "100%"} >
-            <Heading data-aos = "fade-right" my = {5} fontWeight="extrabold" color= {isDark?"cyan.300" : "cyan.700"} size="2xl">
-                                    Our Clients👷🏻‍♂️
-           </Heading>
+            
            <Lottie alignSelf = "flex-start" options={defaultOptions1} style={{position : "absolute", top :"10%",left : "-35%",opacity : "50%"}}
                  height={isNotSmallerScreen ? 500 : 400} width={isNotSmallerScreen ? 500 : 400} 
            />
+           
            
             <Accordion  allowMultiple >
             <AccordionItem data-aos = "fade-up">
@@ -174,6 +174,32 @@ const Clients = () => {
                 <AccordionButton>
                     <Box flex="1" textAlign="left">
                     10. BMJ Law Partners
+                    </Box>
+                    <AccordionIcon />
+                </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>
+                
+                </AccordionPanel>
+            </AccordionItem>
+            <AccordionItem  data-aos = "fade-up">
+                <h2>
+                <AccordionButton>
+                    <Box flex="1" textAlign="left">
+                    11. Nimbus Harbour
+                    </Box>
+                    <AccordionIcon />
+                </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>
+                
+                </AccordionPanel>
+            </AccordionItem>
+            <AccordionItem  data-aos = "fade-up">
+                <h2>
+                <AccordionButton>
+                    <Box flex="1" textAlign="left">
+                    12. Tata 1mg pvt. ltd.
                     </Box>
                     <AccordionIcon />
                 </AccordionButton>

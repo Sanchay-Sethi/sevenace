@@ -10,22 +10,30 @@ import seven from "../images/clientsLogo/seven.png"
 import eight from "../images/clientsLogo/eight.png"
 import nine from "../images/clientsLogo/nine.jpeg"
 import "./common.css"
-const images = [one, two, three, four, five, six, seven, eight, nine]
+const images = [one, two, eight, three, four, six,five, seven, nine]
 
 const ClientGrid = () => {
   return (
     <div style = {{
-        width: "100%"
+        width: "100%",
+        margin : "20px",
+        display : "flex",
+        justifyContent : "center",
+        alignItems : "center",
+        flexWrap : "wrap"
     }}>
-        <ImageGrid
-            images={images}
-            visibleCount={10}
-            interval={2000}
-            animationItemcount={0}
-            transitionType={"SCALE"}
-            transitionDuration={200}
-            isActive={true}
-        />
+        {
+          images?.map((data, index)=>(
+            <div key = {index} style = {{
+              width : "200px",
+              margin : "10px",
+              borderRadius : "20px"
+            }}>
+              <img src = {data} style = {{objectFit : "center", width : "100%", borderRadius : "10px"}}/>
+            </div>
+          ))
+        }
+        
     </div>
   )
 }

@@ -218,8 +218,11 @@ function App() {
       <About/>
       <Projects/>
       {/* <Skills/> */}
-      <Clients/>
+      <Heading data-aos = "fade-right" my = {5} fontWeight="extrabold" color= {isDark?"cyan.300" : "cyan.700"} size="2xl">
+           Our Clients👷🏻‍♂️
+      </Heading>
       <ClientGrid/>
+      <Clients/>
       <Contact/>
       <Footer2/>
     </VStack>
