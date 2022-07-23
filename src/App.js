@@ -52,6 +52,7 @@ import {Helmet} from "react-helmet"
 import Lottie from "react-lottie";
 import loadingcons from "./images/logo3.png";
 import "./App.css"
+import ClientGrid from './components/ClientGrid';
 
 function App() {
   const [loadingAnim, setLoadingAnim] = useState(false)
@@ -218,6 +219,7 @@ function App() {
       <Projects/>
       {/* <Skills/> */}
       <Clients/>
+      <ClientGrid/>
       <Contact/>
       <Footer2/>
     </VStack>

@@ -1,0 +1,20 @@
+.brand-animation-wraper{
+    margin : 30px 0px;
+    justify-content: space-evenly;
+}
+.brand-animation-wraper .show-scale .iitem{
+    transform: scale(2);
+}
+.brand-animation-wraper .item{
+    margin : 5px;
+}
+
+@media only screen and (max-width: 1100px) {
+    .brand-animation-wraper .show-scale .iitem{
+        transform: scale(1);
+    }
+    .brand-animation-wraper .item{
+        margin : 5px;
+    }
+}
+
